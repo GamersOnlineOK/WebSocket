@@ -63,9 +63,7 @@ io.on('connection', (socket) => {
 app.use(express.static('public'))
 
 
-app.get('*', (req, res) =>{
-    res.sendFile(path.resolve('public/404.html'));
-});
+
 
 const srv = server.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
